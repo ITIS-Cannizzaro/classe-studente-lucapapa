@@ -1,43 +1,48 @@
+package ditta;
+public class veri09 {
+	private int a=2006;
+	private String n="simone";
+	public veri09(String nome, int adn) {
+	
+	}
+	public void setanno() {
+		int anno=a;
+	}
+	public int getanno(int anno) {
+		return anno;
+	}
+	public void setanno2(int adn) {
+		int anno2=adn;
+	}
+	public int getanno2(int anno2) {
+		return anno2;
+	}
+	public String toString() {
+		return "veri09 []";
+	}
+}
+
+
+package ditta;
 import java.util.Scanner;
-
-// Chiamare la classe col proprio cognome
-public class MainClass
-{
-	static Scanner in = new Scanner(System.in);
-	
-	public static void main(String[] args)
-	{
-		while(true)
-		{
-			stampaMenu();
-			int scelta = Integer.parseInt(in.nextLine());
-			switch(scelta)
-			{
-				//aggiungere, togliere casi a seconda delle proprie scelte
-				case 1:
-					//Inserire metodo statico
-				break;
-				case 2:
-					//Inserire metodo statico
-				break;
-				case 3:
-					//Inserire metodo statico
-				break;
-				default:
-					System.out.println("Scelta errata, riprova!");
-
-			}
-		}
+public class main {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("inserire il nome dello studente");
+		String nome = scan.nextLine();
+		System.out.println("inserire l'anno di nascita dello studente");
+		int adn= scan.nextInt();
+		veri09 s1=new veri09(nome,adn);
+		int a=2006;
+		String n="simone";
+		veri09 s2=new veri09(n, a);
+		if(adn>a) {
+			System.out.println(nome+"e' piu grande");
+		}else if(adn<a) {
+			System.out.println(n+"e' piu grande");
+		}else {
+			System.out.println(nome+" e "+n
+					+" sono coetanei");
+		}	
 	}
-	static void stampaMenu()
-	{
-		// Modificare il menù secondo le proprie scelte
-		System.out.println("1 - Es n. * - Titolo es. *");
-		System.out.println("2 - Es n. * - Titolo es. *");
-		System.out.println("3 - Es n. * - Titolo es. *");
-		System.out.println("4 - Es n. * - Titolo es. *");
-		System.out.println("5 - Es n. * - Titolo es. *");
-	}
-	
-	// Aggiungere qui i metodi statici relativi agli esercizi scelti
 }
